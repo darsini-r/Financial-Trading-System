@@ -1,93 +1,127 @@
-📈 Financial Trading System
+# 📈 Financial Trading System
 
-A desktop-based trading analytics system built using advanced data structures for efficient processing of financial trade data.
+A trading system with GUI for managing and analyzing trade data using B+ Tree and Segment Tree.
 
-🚀 Overview
+---
 
-This project implements a hybrid data structure architecture combining:
+## 🚀 Overview
 
-B+ Tree for efficient indexing of trades by timestamp
-Segment Tree for fast aggregation and range-based analytics
+This project uses a hybrid data structure approach:
 
-The system supports dynamic trade operations and enables users to perform optimized queries on large datasets with minimal computational overhead.
+* **B+ Tree** → indexing trades by timestamp
+* **Segment Tree** → fast aggregation and range queries
 
-🚀 Features
-📊 Trade Management
-Insert, update, and delete trades
-Structured storage of trade data (Stock ID, Timestamp, Price, Volume)
-Real-time synchronization with GUI table
-⚡ Efficient Range Queries
-Compute total traded volume within a time range
-Identify maximum and minimum prices
-Optimized query performance using hybrid tree structure
-📈 Market Trend Analysis
-Volatility detection based on price spread
-Classifies market behavior into:
-Stable
-High Volatility
-🖥️ Interactive GUI
-Built using Java Swing
-Clean dashboard layout (Input Panel, Data Table, Analytics Panel)
-Table row selection auto-fills input fields
-Real-time output logging
+The system supports efficient querying and analysis of trade data.
 
-🧠 System Design
+---
 
-The system follows a layered architecture:
+## ✨ Features
 
-User Interface (GUI)
-        ↓
-B+ Tree (Time-based Indexing)
-        ↓
+### 📊 Trade Management
+
+* Insert, update, and delete trades
+* Stores trade data (Stock ID, Timestamp, Price, Volume)
+* Updates reflected in GUI table
+
+### ⚡ Range Queries
+
+* Total volume in a time range
+* Maximum price
+* Minimum price
+
+### 📈 Trend Analysis
+
+* Calculates volatility based on price range
+* Classifies market as:
+
+  * Stable
+  * High Volatility
+
+### 🖥️ GUI
+
+* Built using Java Swing
+* Input panel, table, and analytics panel
+* Table row selection auto-fills input fields
+* Displays results in output area
+
+---
+
+## 🧠 System Design
+
+```
+GUI
+ ↓
+B+ Tree (Indexing)
+ ↓
 Leaf Nodes (Trade Storage)
-        ↓
-Segment Tree (Aggregation Layer)
-Design Highlights:
-B+ Tree ensures O(log N) search and insertion
-Segment Tree enables O(log B) aggregation within nodes
-Combined approach provides efficient range queries:
-O(log N + k log B)
+ ↓
+Segment Tree (Aggregation)
+```
 
-🛠️ Tech Stack
-Language: Java
-GUI Framework: Java Swing
-Core Concepts:
-B+ Tree
-Segment Tree
-Time-series data processing
-Algorithm optimization
+---
 
-📂 Project Structure
+## 🛠️ Tech Stack
+
+* Java
+* Java Swing
+* B+ Tree
+* Segment Tree
+
+---
+
+## 📂 Project Structure
+
+```
 FinancialTradingSystem/
-│
 ├── Trade.java
 ├── SegmentTree.java
 ├── BPlusTree.java
 ├── TradingSystemGUI.java
 ├── QueryResult.java
+```
 
-▶️ Getting Started
-Compile
+---
+
+## ▶️ Getting Started
+
+### Compile
+
+```bash
 javac *.java
-Run
+```
+
+### Run
+
+```bash
 java TradingSystemGUI
+```
 
-📊 Performance Overview
-Operation	Complexity
-Insert	O(log N)
-Update	O(log N)
-Delete	O(log N)
-Range Query	O(log N + k log B)
+---
 
-🔮 Future Enhancements
-Persistent storage (file/database integration)
-Real-time streaming data support
-Graph-based visualization (charts)
-Multi-threaded processing for scalability
+## 📊 Performance
 
-👨‍💻 Author
+* Insert: O(log N)
+* Update: O(log N)
+* Delete: O(log N)
+* Range Query: O(log N + k log B)
+
+---
+
+## 🔮 Future Improvements
+
+* File/database storage
+* Real-time data support
+* Charts/visualization
+* Multi-threading
+
+---
+
+## 👨‍💻 Author
+
 Darsini
 
-⭐ Summary
+---
 
-This project demonstrates the ability to combine data structures, system design, and user interface development to build an efficient and scalable analytics application.
+## ⭐ Summary
+
+This project combines data structures and a GUI to manage and analyze trade data efficiently.
